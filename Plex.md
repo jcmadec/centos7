@@ -18,7 +18,7 @@ Installation du paquet
 Installation de cifs
 
     yum install cifs-utils
-## accès au médias
+## Accès au médias
 
     mkdir /mnt/synology
     cd synology
