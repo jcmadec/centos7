@@ -20,27 +20,26 @@ Installation de cifs
     yum install cifs-utils
 ## accès au médias
 
-mkdir /mnt/synology
-cd synology
-mkdir music_flac
-mkdir music_mp3
-mkdir video
-mkdir photo
+    mkdir /mnt/synology
+    cd synology
+    mkdir music_flac
+    mkdir music_mp3
+    mkdir video
+    mkdir photo
 
-mount.cifs //192.168.0.100/music_flac /mnt/synology/music_flac -o user= user
+    mount.cifs //192.168.0.100/music_flac /mnt/synology/music_flac -o user= user
 
 Ici le mot de passe pour se connecter est demandé
 Pour réaliser une connexion automatique, création du fichier credentials dans /etc/samba
 et ajout de ces lignes:
 
-username=user
-password=password
+    username=user
+    password=password
 
 ajout dans le fichier /etc/fstab
-//192.168.0.100/music_mp3 /mnt/synology/music_mp3 cifs credentials=/etc/samba/credentials,defaults  0 0
 
-
-
+    //192.168.0.100/music_mp3 /mnt/synology/music_mp3 cifs credentials=/etc/samba/credentials,defaults  0 0
+    
 ## Configuration du firewall
 
 Se connecter en root au serveur
@@ -65,7 +64,7 @@ ajouter au fichier:
 
 Démarrage du firewall
 
-   systemctl start firewalld.service
+    systemctl start firewalld.service
 
 Ajout de la règle:
 
