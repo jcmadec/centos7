@@ -1,6 +1,6 @@
 # Installation Plex
 
-`yum update`
+  yum update
 
 
 
